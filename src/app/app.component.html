@@ -2,3 +2,32 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+<br/>
+<div *ngFor = "let buah of item; let i=index">
+{{i+1}}. {{buah.nama}} - {{buah.harga|currency:'Rp.'}}
+</div>
+
+<br/>
+
+<div *ngFor = "let data of itemArr">
+  {{data}}
+</div>
+
+<ng-template
+*ngIf ="show;then showBlock; else notShow" >
+</ng-template> 
+<ng-template #showBlock>
+  <p>ada block</p>
+</ng-template>
+<ng-template #notShow>
+  <p>kosong</p>
+</ng-template>
+
+
+<p>
+  <input [(ngModel)]= "a" type="text"/>*
+  <input [(ngModel)]= "b" type="text"/> =
+  {{a*b}}
+</p>
+
+<button (click)="KlikBut()">tekan</button>{{Pesan}}
